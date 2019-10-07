@@ -20,22 +20,22 @@ class Cc0 < Formula
     rm "bin/codex"
     libexec.install %w[bin include runtime lib c0-mode]
     doc.install Dir["doc/*"]
-    (bin/"cc0").write <<-EOS
+    (bin/"cc0").write <<~EOS
       #!/bin/sh
       #{libexec}/bin/cc0.bin $*
     EOS
 
-    (bin/"coin").write <<-EOS
+    (bin/"coin").write <<~EOS
       #!/bin/sh
       #{libexec}/bin/coin.bin $*
     EOS
 
-    (bin/"coin-exec").write <<-EOS
+    (bin/"coin-exec").write <<~EOS
       #!/bin/sh
       #{libexec}/bin/coin-exec.bin $*
     EOS
 
-    (bin/"codex").write <<-EOS
+    (bin/"codex").write <<~EOS
       #!/bin/sh
       #{libexec}/bin/codex.bin $*
     EOS
